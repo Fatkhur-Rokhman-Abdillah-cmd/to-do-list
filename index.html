@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — Todo List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="dashboard">
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">✓ TodoApp</a>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Dashboard</a>
+        <a href="tasks.html">Tasks</a>
+        <a href="add.html">Tambah</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Halo, selamat datang 👋</h1>
+      <p>Berikut ringkasan produktivitas kamu hari ini.</p>
+    </section>
+
+    <section class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-label">Total Task</span>
+        <span class="stat-value" data-stat="total">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Aktif</span>
+        <span class="stat-value" data-stat="active">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Selesai</span>
+        <span class="stat-value" data-stat="done">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Progress</span>
+        <span class="stat-value" data-stat="progress">0%</span>
+      </div>
+    </section>
+
+    <section class="progress-section">
+      <div class="progress-bar"><div class="progress-fill" data-progress></div></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-header">
+        <h2>Task Terbaru</h2>
+        <a href="tasks.html" class="link">Lihat semua →</a>
+      </div>
+      <ul class="task-list" data-recent-list></ul>
+      <p class="empty-state" data-recent-empty hidden>Belum ada task. <a href="add.html">Tambah task</a></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

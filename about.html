@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Todo List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="about">
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">✓ TodoApp</a>
+      <nav class="nav-links">
+        <a href="index.html">Dashboard</a>
+        <a href="tasks.html">Tasks</a>
+        <a href="add.html">Tambah</a>
+        <a href="about.html" class="active">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Tentang Aplikasi</h1>
+
+    <article class="card about-card">
+      <h2>✓ TodoApp</h2>
+      <p>Aplikasi todo-list sederhana yang dibangun dengan <strong>HTML</strong>, <strong>CSS</strong>, dan <strong>JavaScript vanilla</strong>. Data disimpan secara lokal di browser menggunakan <code>localStorage</code>.</p>
+
+      <h3>Fitur</h3>
+      <ul>
+        <li>✅ Tambah, edit, hapus task</li>
+        <li>✅ Tandai selesai / aktif</li>
+        <li>✅ Prioritas (Low / Medium / High)</li>
+        <li>✅ Filter by status, prioritas, dan pencarian</li>
+        <li>✅ Deadline dengan indikator overdue</li>
+        <li>✅ Statistik & progress bar</li>
+      </ul>
+
+      <h3>Struktur Kode</h3>
+      <p>Kode JavaScript dipecah menjadi modul-modul kecil: <em>Config</em>, <em>Storage</em>, <em>TaskService</em>, <em>Renderer</em>, dan <em>Page Controller</em>.</p>
+
+      <p class="muted">Versi 1.0.0 — Dibuat dengan ❤️</p>
+    </article>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

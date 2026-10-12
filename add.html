@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tambah Task — Todo List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="form">
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">✓ TodoApp</a>
+      <nav class="nav-links">
+        <a href="index.html">Dashboard</a>
+        <a href="tasks.html">Tasks</a>
+        <a href="add.html" class="active">Tambah</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 data-form-title>Tambah Task Baru</h1>
+
+    <form class="task-form card" data-task-form novalidate>
+      <div class="form-group">
+        <label for="title">Judul <span class="required">*</span></label>
+        <input id="title" name="title" type="text" maxlength="100" required placeholder="Contoh: Belajar JavaScript" />
+        <small class="error" data-error="title"></small>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Deskripsi</label>
+        <textarea id="description" name="description" rows="4" maxlength="500" placeholder="Detail task (opsional)"></textarea>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="priority">Prioritas</label>
+          <select id="priority" name="priority">
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="dueDate">Deadline</label>
+          <input id="dueDate" name="dueDate" type="date" />
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <a href="tasks.html" class="btn btn-ghost">Batal</a>
+        <button type="submit" class="btn btn-primary" data-submit-btn>Simpan</button>
+      </div>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

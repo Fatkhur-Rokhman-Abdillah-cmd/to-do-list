@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Daftar Task — Todo List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="tasks">
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">✓ TodoApp</a>
+      <nav class="nav-links">
+        <a href="index.html">Dashboard</a>
+        <a href="tasks.html" class="active">Tasks</a>
+        <a href="add.html">Tambah</a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-head">
+      <h1>Daftar Task</h1>
+      <a href="add.html" class="btn btn-primary">+ Task Baru</a>
+    </div>
+
+    <section class="filter-bar">
+      <div class="tabs" data-filter-status>
+        <button class="tab active" data-value="all">Semua</button>
+        <button class="tab" data-value="active">Aktif</button>
+        <button class="tab" data-value="done">Selesai</button>
+      </div>
+
+      <div class="filter-right">
+        <select data-filter-priority>
+          <option value="all">Semua Prioritas</option>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+        <input type="search" data-filter-search placeholder="Cari task..." />
+      </div>
+    </section>
+
+    <ul class="task-list" data-task-list></ul>
+    <p class="empty-state" data-task-empty hidden>Tidak ada task yang cocok.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
